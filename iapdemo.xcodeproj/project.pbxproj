@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093892281D67582B00AE68F6 /* PaySelectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 093892261D67582B00AE68F6 /* PaySelectionVC.m */; };
+		093892291D67582B00AE68F6 /* PaySelectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093892271D67582B00AE68F6 /* PaySelectionVC.xib */; };
 		D054E52B1D67292D005CB0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52A1D67292D005CB0D2 /* main.m */; };
 		D054E52E1D67292D005CB0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52D1D67292D005CB0D2 /* AppDelegate.m */; };
 		D054E5311D67292D005CB0D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5301D67292D005CB0D2 /* ViewController.m */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093892251D67582B00AE68F6 /* PaySelectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySelectionVC.h; sourceTree = "<group>"; };
+		093892261D67582B00AE68F6 /* PaySelectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySelectionVC.m; sourceTree = "<group>"; };
+		093892271D67582B00AE68F6 /* PaySelectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaySelectionVC.xib; sourceTree = "<group>"; };
 		D054E5261D67292D005CB0D2 /* iapdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iapdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D054E52A1D67292D005CB0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D054E52C1D67292D005CB0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +81,9 @@
 				D054E52F1D67292D005CB0D2 /* ViewController.h */,
 				D054E5301D67292D005CB0D2 /* ViewController.m */,
 				D054E5321D67292D005CB0D2 /* Main.storyboard */,
+				093892251D67582B00AE68F6 /* PaySelectionVC.h */,
+				093892261D67582B00AE68F6 /* PaySelectionVC.m */,
+				093892271D67582B00AE68F6 /* PaySelectionVC.xib */,
 				D054E5351D67292D005CB0D2 /* Assets.xcassets */,
 				D054E5371D67292D005CB0D2 /* LaunchScreen.storyboard */,
 				D054E53A1D67292D005CB0D2 /* Info.plist */,
@@ -165,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093892291D67582B00AE68F6 /* PaySelectionVC.xib in Resources */,
 				D054E5391D67292D005CB0D2 /* LaunchScreen.storyboard in Resources */,
 				D054E5361D67292D005CB0D2 /* Assets.xcassets in Resources */,
 				D054E5341D67292D005CB0D2 /* Main.storyboard in Resources */,
@@ -182,6 +191,7 @@
 				D054E54A1D6729EE005CB0D2 /* IAPHelper.m in Sources */,
 				D054E54B1D6729EE005CB0D2 /* IAPShare.m in Sources */,
 				D054E54D1D6729EE005CB0D2 /* SFHFKeychainUtils.m in Sources */,
+				093892281D67582B00AE68F6 /* PaySelectionVC.m in Sources */,
 				D054E5311D67292D005CB0D2 /* ViewController.m in Sources */,
 				D054E52E1D67292D005CB0D2 /* AppDelegate.m in Sources */,
 				D054E52B1D67292D005CB0D2 /* main.m in Sources */,

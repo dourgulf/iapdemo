@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IAPShare.h"
+#import "PaySelectionVC.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *productTextField;
@@ -94,6 +95,10 @@
 }
 
 - (IBAction)onCaifutongPlay:(id)sender {
+    PaySelectionVC *selection = [[PaySelectionVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selection];
+//    [self.navigationController pushViewController:nav animated:NO];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end
