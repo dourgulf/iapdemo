@@ -21,6 +21,8 @@
 		D054E54B1D6729EE005CB0D2 /* IAPShare.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5451D6729EE005CB0D2 /* IAPShare.m */; };
 		D054E54C1D6729EE005CB0D2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5471D6729EE005CB0D2 /* NSString+Base64.m */; };
 		D054E54D1D6729EE005CB0D2 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5491D6729EE005CB0D2 /* SFHFKeychainUtils.m */; };
+		D0E617B21D680AE100C9EE3D /* note in Resources */ = {isa = PBXBuildFile; fileRef = D0E617B11D680AE100C9EE3D /* note */; };
+		D0E617B71D68101300C9EE3D /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E617B61D68101300C9EE3D /* PBWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		D054E5471D6729EE005CB0D2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		D054E5481D6729EE005CB0D2 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		D054E5491D6729EE005CB0D2 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		D0E617B11D680AE100C9EE3D /* note */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note; sourceTree = "<group>"; };
+		D0E617B51D68101300C9EE3D /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
+		D0E617B61D68101300C9EE3D /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +95,9 @@
 		D054E5281D67292D005CB0D2 /* iapdemo */ = {
 			isa = PBXGroup;
 			children = (
+				D0E617B01D680AD200C9EE3D /* doc */,
 				0938922E1D67D78000AE68F6 /* MBProgressHUD */,
+				D0E617B41D68101300C9EE3D /* PBWebViewController */,
 				D054E5411D6729EE005CB0D2 /* IAPHelper */,
 				D054E52C1D67292D005CB0D2 /* AppDelegate.h */,
 				D054E52D1D67292D005CB0D2 /* AppDelegate.m */,
@@ -132,6 +139,24 @@
 			);
 			path = IAPHelper;
 			sourceTree = "<group>";
+		};
+		D0E617B01D680AD200C9EE3D /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				D0E617B11D680AE100C9EE3D /* note */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		D0E617B41D68101300C9EE3D /* PBWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0E617B51D68101300C9EE3D /* PBWebViewController.h */,
+				D0E617B61D68101300C9EE3D /* PBWebViewController.m */,
+			);
+			name = PBWebViewController;
+			path = iapdemo/PBWebViewController;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -195,6 +220,7 @@
 				D054E5391D67292D005CB0D2 /* LaunchScreen.storyboard in Resources */,
 				D054E5361D67292D005CB0D2 /* Assets.xcassets in Resources */,
 				D054E5341D67292D005CB0D2 /* Main.storyboard in Resources */,
+				D0E617B21D680AE100C9EE3D /* note in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D054E54C1D6729EE005CB0D2 /* NSString+Base64.m in Sources */,
+				D0E617B71D68101300C9EE3D /* PBWebViewController.m in Sources */,
 				D054E54A1D6729EE005CB0D2 /* IAPHelper.m in Sources */,
 				D054E54B1D6729EE005CB0D2 /* IAPShare.m in Sources */,
 				D054E54D1D6729EE005CB0D2 /* SFHFKeychainUtils.m in Sources */,

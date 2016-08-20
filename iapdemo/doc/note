@@ -1,0 +1,2 @@
+http://119.29.102.184:85/api.php?method=addOrderInfoLog&pid=36&itemId=101&roleId=2048&serverId=1&accounts=sgb&roleLevel=1&gameQn=1&channel_id=1&sign=12
+pid 36的是支付宝 35是微信
