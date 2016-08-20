@@ -61,7 +61,7 @@ static int promptingHUDKey = 0;
     if (text) {
         prompt.label.text = text;
     }
-    [prompt hideAnimated:YES afterDelay:3.0f];
+    [prompt hideAnimated:YES afterDelay:2.0f];
 }
 
 #pragma mark HUD的回调

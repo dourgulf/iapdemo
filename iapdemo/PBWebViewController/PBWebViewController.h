@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, nullable) NSURL *URL;
 
+@property (strong, nonatomic, nullable) NSString *HTMLContent;
+
 /**
  * The URL request that will be loaded by the web view controller.
  * If there is one present when the web view appears, it will be automatically loaded, by calling `load`,

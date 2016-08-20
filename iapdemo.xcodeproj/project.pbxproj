@@ -11,6 +11,8 @@
 		093892291D67582B00AE68F6 /* PaySelectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093892271D67582B00AE68F6 /* PaySelectionVC.xib */; };
 		093892351D67D78000AE68F6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 093892321D67D78000AE68F6 /* MBProgressHUD.m */; };
 		093892391D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 093892381D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m */; };
+		0938923B1D683D6D00AE68F6 /* payways.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0938923A1D683D6D00AE68F6 /* payways.plist */; };
+		0938923E1D6841B100AE68F6 /* UITableView+HideExtraLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0938923D1D6841B100AE68F6 /* UITableView+HideExtraLine.m */; };
 		D054E52B1D67292D005CB0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52A1D67292D005CB0D2 /* main.m */; };
 		D054E52E1D67292D005CB0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52D1D67292D005CB0D2 /* AppDelegate.m */; };
 		D054E5311D67292D005CB0D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5301D67292D005CB0D2 /* ViewController.m */; };
@@ -33,6 +35,9 @@
 		093892321D67D78000AE68F6 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		093892371D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SingleHudPrompt.h"; sourceTree = "<group>"; };
 		093892381D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SingleHudPrompt.m"; sourceTree = "<group>"; };
+		0938923A1D683D6D00AE68F6 /* payways.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = payways.plist; sourceTree = "<group>"; };
+		0938923C1D6841B100AE68F6 /* UITableView+HideExtraLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HideExtraLine.h"; sourceTree = "<group>"; };
+		0938923D1D6841B100AE68F6 /* UITableView+HideExtraLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HideExtraLine.m"; sourceTree = "<group>"; };
 		D054E5261D67292D005CB0D2 /* iapdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iapdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D054E52A1D67292D005CB0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D054E52C1D67292D005CB0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,9 +114,12 @@
 				093892271D67582B00AE68F6 /* PaySelectionVC.xib */,
 				093892371D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.h */,
 				093892381D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m */,
+				0938923C1D6841B100AE68F6 /* UITableView+HideExtraLine.h */,
+				0938923D1D6841B100AE68F6 /* UITableView+HideExtraLine.m */,
 				D054E5351D67292D005CB0D2 /* Assets.xcassets */,
 				D054E5371D67292D005CB0D2 /* LaunchScreen.storyboard */,
 				D054E53A1D67292D005CB0D2 /* Info.plist */,
+				0938923A1D683D6D00AE68F6 /* payways.plist */,
 				D054E5291D67292D005CB0D2 /* Supporting Files */,
 			);
 			path = iapdemo;
@@ -221,6 +229,7 @@
 				D054E5361D67292D005CB0D2 /* Assets.xcassets in Resources */,
 				D054E5341D67292D005CB0D2 /* Main.storyboard in Resources */,
 				D0E617B21D680AE100C9EE3D /* note in Resources */,
+				0938923B1D683D6D00AE68F6 /* payways.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +248,7 @@
 				093892351D67D78000AE68F6 /* MBProgressHUD.m in Sources */,
 				093892281D67582B00AE68F6 /* PaySelectionVC.m in Sources */,
 				D054E5311D67292D005CB0D2 /* ViewController.m in Sources */,
+				0938923E1D6841B100AE68F6 /* UITableView+HideExtraLine.m in Sources */,
 				D054E52E1D67292D005CB0D2 /* AppDelegate.m in Sources */,
 				093892391D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m in Sources */,
 				D054E52B1D67292D005CB0D2 /* main.m in Sources */,

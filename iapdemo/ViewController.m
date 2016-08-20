@@ -109,7 +109,8 @@
     selection.priceDescrition = @"1元购买500金币";
     selection.quantity = @"数量：1";
     selection.amount = @"总价：￥1";
-    [self presentViewController:selection animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selection];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end

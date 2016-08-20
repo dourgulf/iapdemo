@@ -11,7 +11,7 @@
 @interface PBWebViewController ()
 
 @property (strong, nonatomic) UIWebView *webView;
-
+@property (weak, nonatomic) UIActivityIndicatorView *loadingIndicator;
 @property (strong, nonatomic) UIBarButtonItem *stopLoadingButton;
 @property (strong, nonatomic) UIBarButtonItem *reloadButton;
 @property (strong, nonatomic) UIBarButtonItem *backButton;
@@ -75,12 +75,15 @@
     self.webView = [[UIWebView alloc] init];
     self.webView.scalesPageToFit = YES;
     self.view = self.webView;
+    UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.view addSubview:activity];
+    self.loadingIndicator = activity;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setupToolBarItems];
+//    [self setupToolBarItems];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -89,6 +92,9 @@
     self.webView.delegate = self;
     if (self.URL) {
         [self load];
+    }
+    else if (self.HTMLContent) {
+        [self loadHTML:self.HTMLContent];
     }
 }
 
@@ -208,6 +214,7 @@
 {
     [self toggleState];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [self.loadingIndicator stopAnimating];
 }
 
 #pragma mark - Button actions
@@ -232,12 +239,17 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self toggleState];
+    self.loadingIndicator.center = self.view.center;
+    [self.loadingIndicator startAnimating];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self finishLoad];
-    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    NSString *webTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    if (webTitle.length > 0) {
+        self.title = webTitle;
+    }
     self.URL = self.webView.request.URL;
 }
 
