@@ -17,53 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My3-X3-X3g">
-                                <rect key="frame" x="267" y="285" width="66" height="30"/>
-                                <state key="normal" title="AppleBuy"/>
-                                <connections>
-                                    <action selector="onAppleBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gN0-fJ-Ojn"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="top.dawenhing.iap01" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlq-m1-lwp">
-                                <rect key="frame" x="223" y="216" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-tx-FWA">
-                                <rect key="frame" x="279" y="571" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-tx-FWA">
+                                <rect key="frame" x="300" y="592" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="L48-XH-hqT">
-                                <rect key="frame" x="223" y="281" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLT-Ub-Tor">
-                                <rect key="frame" x="268" y="333" width="65" height="30"/>
-                                <state key="normal" title="caifutong"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hri-bU-gP5">
+                                <rect key="frame" x="211" y="303" width="177" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="苹果充值" image="charge">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="onCaifutongPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgF-zC-Qjq"/>
+                                    <action selector="onAppleBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GX-hc-rrh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="先在系统注销自己的账号，然后用iaptest@dawenhing.top 密码Zz1234567&amp;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-w5-4IR">
+                                <rect key="frame" x="14" y="391" width="572" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsj-KN-999">
+                                <rect key="frame" x="211" y="223" width="177" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="线下充值" image="charge">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCaifutongPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWA-8c-Ta0"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="My3-X3-X3g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1SF-L0-z8M"/>
-                            <constraint firstItem="My3-X3-X3g" firstAttribute="leading" secondItem="L48-XH-hqT" secondAttribute="trailing" constant="7" id="5ID-2d-MvS"/>
-                            <constraint firstItem="My3-X3-X3g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AAP-kL-MYY"/>
-                            <constraint firstItem="Mlq-m1-lwp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jmo-Ue-2ny"/>
-                            <constraint firstItem="L48-XH-hqT" firstAttribute="centerY" secondItem="My3-X3-X3g" secondAttribute="centerY" id="Ncd-pn-bp3"/>
-                            <constraint firstItem="Rc6-tx-FWA" firstAttribute="centerX" secondItem="My3-X3-X3g" secondAttribute="centerX" id="V1y-Yv-sMD"/>
-                            <constraint firstItem="fLT-Ub-Tor" firstAttribute="top" secondItem="My3-X3-X3g" secondAttribute="bottom" constant="18" id="ZEi-zS-He8"/>
-                            <constraint firstItem="fLT-Ub-Tor" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFN-BI-dVo"/>
-                            <constraint firstItem="My3-X3-X3g" firstAttribute="top" secondItem="Mlq-m1-lwp" secondAttribute="bottom" constant="39" id="r4l-R3-0fZ"/>
+                            <constraint firstItem="hri-bU-gP5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="PMh-IV-5RU"/>
+                            <constraint firstItem="dsj-KN-999" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="VnN-HT-7NF"/>
+                            <constraint firstItem="tcV-w5-4IR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0k-p8-7XT"/>
+                            <constraint firstItem="hri-bU-gP5" firstAttribute="leading" secondItem="dsj-KN-999" secondAttribute="leading" id="eVs-Nh-kuB"/>
+                            <constraint firstItem="tcV-w5-4IR" firstAttribute="top" secondItem="hri-bU-gP5" secondAttribute="bottom" constant="15" id="jRO-5u-66c"/>
+                            <constraint firstItem="dsj-KN-999" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mlP-RF-EYv"/>
+                            <constraint firstItem="Rc6-tx-FWA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qpx-gM-sYg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rc6-tx-FWA" secondAttribute="bottom" constant="8" symbolic="YES" id="rVM-zh-BKo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="payingActivity" destination="L48-XH-hqT" id="Wwj-pA-yyO"/>
                         <outlet property="paymentResultLabel" destination="Rc6-tx-FWA" id="ZgL-kF-jsW"/>
-                        <outlet property="productTextField" destination="Mlq-m1-lwp" id="34Y-Qe-fOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,4 +71,7 @@
             <point key="canvasLocation" x="-11" y="230"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="charge" width="73" height="73"/>
+    </resources>
 </document>

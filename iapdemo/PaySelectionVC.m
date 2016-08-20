@@ -10,10 +10,10 @@
 
 @interface PaySelectionVC ()
 
-@property (weak, nonatomic) IBOutlet UILabel *productDescrition;
-@property (weak, nonatomic) IBOutlet UILabel *priceDescrition;
-@property (weak, nonatomic) IBOutlet UILabel *quantity;
-@property (weak, nonatomic) IBOutlet UILabel *amount;
+@property (weak, nonatomic) IBOutlet UILabel *productLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 
 @end
 
@@ -21,17 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(onClose)];
-}
-
-- (void)onClose {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    self.productLabel.text = self.productDescrition;
+    self.priceLabel.text = self.priceDescrition;
+    self.quantityLabel.text = self.quantity;
+    self.amountLabel.text = self.amount;
 }
 
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onCloseClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)onWechatPay:(id)sender {

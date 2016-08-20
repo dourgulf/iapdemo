@@ -10,5 +10,10 @@
 
 @interface PaySelectionVC : UIViewController
 
+@property (copy, nonatomic) NSString *productDescrition;
+@property (copy, nonatomic) NSString *priceDescrition;
+@property (copy, nonatomic) NSString *quantity;
+@property (copy, nonatomic) NSString *amount;
 
 @end
+
