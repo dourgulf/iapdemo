@@ -105,10 +105,10 @@
 
 - (IBAction)onCaifutongPlay:(id)sender {
     PaySelectionVC *selection = [[PaySelectionVC alloc] init];
-    selection.productDescrition = @"购买500金币";
-    selection.priceDescrition = @"1元购买500金币";
-    selection.quantity = @"数量：1";
-    selection.amount = @"总价：￥1";
+//    selection.productDescrition = @"购买500金币";
+//    selection.priceDescrition = @"1元购买500金币";
+//    selection.quantity = @"数量：1";
+//    selection.amount = @"总价：￥1";
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selection];
     [self presentViewController:nav animated:YES completion:nil];
 }

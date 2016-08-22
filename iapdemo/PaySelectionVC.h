@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PayInfoItem.h"
 
 @interface PaySelectionVC : UIViewController
 
-@property (copy, nonatomic) NSString *productDescrition;
-@property (copy, nonatomic) NSString *priceDescrition;
-@property (copy, nonatomic) NSString *quantity;
-@property (copy, nonatomic) NSString *amount;
+@property (strong, nonatomic) PayInfoItem *infoItem;
 
 @end
 

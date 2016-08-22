@@ -27,10 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.productLabel.text = self.productDescrition;
-    self.priceLabel.text = self.priceDescrition;
-    self.quantityLabel.text = self.quantity;
-    self.amountLabel.text = self.amount;
+    self.productLabel.text = self.infoItem.name;
+    self.priceLabel.text = [[NSString alloc] initWithFormat:@"%@元购买%@", @(self.infoItem.price), self.infoItem.name];
+    self.quantityLabel.text = [[NSString alloc] initWithFormat:@"数量：%@", @(self.infoItem.amount)];
+    self.amountLabel.text = [[NSString alloc] initWithFormat:@"总价：%@", @(self.infoItem.price * self.infoItem.amount)];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(onCloseClicked:)];
     // 后续子视图的导航返回统一用这个title。
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:nil action:nil];

@@ -13,6 +13,7 @@
 		093892391D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 093892381D67EBBB00AE68F6 /* UIViewController+SingleHudPrompt.m */; };
 		0938923B1D683D6D00AE68F6 /* payways.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0938923A1D683D6D00AE68F6 /* payways.plist */; };
 		0938923E1D6841B100AE68F6 /* UITableView+HideExtraLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0938923D1D6841B100AE68F6 /* UITableView+HideExtraLine.m */; };
+		098AEAB11D6B313C00D718A7 /* PayInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AEAB01D6B313C00D718A7 /* PayInfoItem.m */; };
 		D054E52B1D67292D005CB0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52A1D67292D005CB0D2 /* main.m */; };
 		D054E52E1D67292D005CB0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E52D1D67292D005CB0D2 /* AppDelegate.m */; };
 		D054E5311D67292D005CB0D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D054E5301D67292D005CB0D2 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 		0938923A1D683D6D00AE68F6 /* payways.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = payways.plist; sourceTree = "<group>"; };
 		0938923C1D6841B100AE68F6 /* UITableView+HideExtraLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HideExtraLine.h"; sourceTree = "<group>"; };
 		0938923D1D6841B100AE68F6 /* UITableView+HideExtraLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HideExtraLine.m"; sourceTree = "<group>"; };
+		098AEAAF1D6B313C00D718A7 /* PayInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayInfoItem.h; sourceTree = "<group>"; };
+		098AEAB01D6B313C00D718A7 /* PayInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayInfoItem.m; sourceTree = "<group>"; };
 		D054E5261D67292D005CB0D2 /* iapdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iapdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D054E52A1D67292D005CB0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D054E52C1D67292D005CB0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				D054E52F1D67292D005CB0D2 /* ViewController.h */,
 				D054E5301D67292D005CB0D2 /* ViewController.m */,
 				D054E5321D67292D005CB0D2 /* Main.storyboard */,
+				098AEAAF1D6B313C00D718A7 /* PayInfoItem.h */,
+				098AEAB01D6B313C00D718A7 /* PayInfoItem.m */,
 				093892251D67582B00AE68F6 /* PaySelectionVC.h */,
 				093892261D67582B00AE68F6 /* PaySelectionVC.m */,
 				093892271D67582B00AE68F6 /* PaySelectionVC.xib */,
@@ -197,7 +202,7 @@
 				TargetAttributes = {
 					D054E5251D67292D005CB0D2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 73P9JV3Y9D;
+						DevelopmentTeam = JD7WK49ECH;
 					};
 				};
 			};
@@ -245,6 +250,7 @@
 				D054E54A1D6729EE005CB0D2 /* IAPHelper.m in Sources */,
 				D054E54B1D6729EE005CB0D2 /* IAPShare.m in Sources */,
 				D054E54D1D6729EE005CB0D2 /* SFHFKeychainUtils.m in Sources */,
+				098AEAB11D6B313C00D718A7 /* PayInfoItem.m in Sources */,
 				093892351D67D78000AE68F6 /* MBProgressHUD.m in Sources */,
 				093892281D67582B00AE68F6 /* PaySelectionVC.m in Sources */,
 				D054E5311D67292D005CB0D2 /* ViewController.m in Sources */,
@@ -368,7 +374,7 @@
 				INFOPLIST_FILE = iapdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = top.dawenhing.iaptest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.bjby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -383,7 +389,7 @@
 				INFOPLIST_FILE = iapdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = top.dawenhing.iaptest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.bjby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
