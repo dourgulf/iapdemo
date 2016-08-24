@@ -7,16 +7,16 @@
 		<string>微信支付</string>
 		<key>icon</key>
 		<string>wechat</string>
-		<key>pid</key>
-		<integer>35</integer>
+		<key>request</key>
+		<string>http://119.29.102.184:85/api.php?method=addOrderInfoLog&amp;pid=35&amp;itemId=%1$@&amp;roleId=%2$@&amp;serverId=1&amp;accounts=sgb&amp;roleLevel=1&amp;gameQn=1&amp;channel_id=1&amp;sign=12</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>支付宝支付</string>
 		<key>icon</key>
 		<string>alipay</string>
-		<key>pid</key>
-		<string>36</string>
+		<key>request</key>
+		<string>http://119.29.102.184:85/api.php?method=addOrderInfoLog&amp;pid=36&amp;itemId=%1$@&amp;roleId=%2$@&amp;serverId=1&amp;accounts=sgb&amp;roleLevel=1&amp;gameQn=1&amp;channel_id=1&amp;sign=12</string>
 	</dict>
 </array>
 </plist>

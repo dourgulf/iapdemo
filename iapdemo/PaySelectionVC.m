@@ -86,17 +86,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *config = [self.paymentWays objectAtIndex:indexPath.row];
-    int pid = [config[@"pid"] intValue];
-    [self requestPayWebContentWithPID:pid completion:^(NSString *payInfo, NSString *cpOrderId)
-     {
-         [self presentPayInfo:payInfo withOrderId:cpOrderId];
-     }];
+    NSString *request = config[@"request"];
+    NSURL *serverURL = [self formatRequst:request];
+    [self getPayInfoFromURL:serverURL completion:^(NSString *payInfo, NSString *cpOrderId) {
+        [self presentPayWeb:payInfo withOrderId:cpOrderId];
+    }];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (NSURL *)formatRequst:(NSString *)request {
+    NSString *formatted = [[NSString alloc] initWithFormat:request, self.infoItem.goodId, self.infoItem.roleInfo];
+#ifdef DEBUG
+    NSLog(@"server URL:\n%@", formatted);
+#endif
+    return [NSURL URLWithString:formatted];
 }
 
 #pragma mark 支付请求
-- (void)requestPayWebContentWithPID:(int)pid completion:(void (^)(NSString *payInfo, NSString *cpOrderId))handler{
-    NSString *serverStr = [[NSString alloc] initWithFormat:@"http://119.29.102.184:85/api.php?method=addOrderInfoLog&pid=%d&itemId=101&roleId=2048&serverId=1&accounts=sgb&roleLevel=1&gameQn=1&channel_id=1&sign=12", pid];
-    NSURL *serverURL = [NSURL URLWithString:serverStr];
+- (void)getPayInfoFromURL:(NSURL *)serverURL
+                   completion:(void (^)(NSString *payInfo, NSString *cpOrderId))handler
+{
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:serverURL];
     request.HTTPMethod = @"POST";
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError)
@@ -111,6 +120,7 @@
                     if ([data isKindOfClass:[NSDictionary class]]) {
                         NSString *payInfo = data[@"pay_info"];
                         NSString *cpOrderId = data[@"cpOrderId"];
+                        // 类型保护
                         if ([payInfo isKindOfClass:[NSNull class]]) {
                             payInfo = nil;
                         }
@@ -124,20 +134,22 @@
                     }
                 }
             }
-            [self hidePromptWithError:@"服务器异常, 请联系客服"];
+            [self hidePromptWithError:@"服务器异常，请联系客服"];
         }
         else {
             NSLog(@"Connection error:%@", connectionError);
             [self hidePromptWithError:@"网络异常，请稍后再试"];
-            [self hidePromptAfterDelay:2];
         }
     }];
 }
 
-- (void)presentPayInfo:(NSString *)payInfo withOrderId:(NSString *)cpOrderId {
-    if (payInfo) {
+- (void)presentPayWeb:(NSString *)html withOrderId:(NSString *)cpOrderId {
+    if (html) {
         PBWebViewController *web = [[PBWebViewController alloc] init];
-        web.HTMLContent = payInfo;
+        web.HTMLContent = html;
+#ifdef DEBUG
+        NSLog(@"payweb:\n%@", html);
+#endif
         web.title = @"正在加载支付界面";
         [self.navigationController pushViewController:web animated:YES];
     }

@@ -10,9 +10,13 @@
 
 @interface PayInfoItem : NSObject
 
+// 支付信息：
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *goodId;
 @property (assign, nonatomic) int amount;
 @property (assign, nonatomic) int price;
+
+// 角色信息
+@property (copy, nonatomic) NSString *roleInfo;
 
 @end

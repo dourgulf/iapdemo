@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IAPShare.h"
+#import "PayInfoItem.h"
 #import "PaySelectionVC.h"
 #import "UIViewController+SingleHudPrompt.h"
 
@@ -17,12 +18,16 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *paymentResultLabel;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *paymentType;
+
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.paymentType.selectedSegmentIndex = 0;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,10 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark 用户操作
-- (IBAction)onAppleBuy:(id)sender {
-    
-    NSString *productString = @"top.dawenhing.iap01";
+#pragma mark 支付操作
+- (void)doAppleyPayment:(PayInfoItem *)infoItem {
+    NSString *productString = infoItem.goodId;
     // 先在iPhone手机注销你自己的AppStore的账号
     // 用测试账号iaptest@dawenhing.top， 密码Zz1234567&
     
@@ -103,14 +107,58 @@
      }];
 }
 
-- (IBAction)onCaifutongPlay:(id)sender {
+- (void)doOfflinePayment:(PayInfoItem *)infoItem {
     PaySelectionVC *selection = [[PaySelectionVC alloc] init];
-//    selection.productDescrition = @"购买500金币";
-//    selection.priceDescrition = @"1元购买500金币";
-//    selection.quantity = @"数量：1";
-//    selection.amount = @"总价：￥1";
+    selection.infoItem = infoItem;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selection];
     [self presentViewController:nav animated:YES completion:nil];
+}
+
+
+#pragma mark 用户交互（相当于游戏内容的部分）
+- (void)doPayment:(PayInfoItem *)infoItem {
+    if ([self useApplePayment]) {
+        [self doAppleyPayment:infoItem];
+    }
+    else {
+        [self doOfflinePayment:infoItem];
+    }
+}
+
+- (BOOL)useApplePayment {
+    return (self.paymentType.selectedSegmentIndex == 0);
+}
+
+- (IBAction)onBuy1:(id)sender {
+    PayInfoItem *infoItem = [[PayInfoItem alloc] init];
+    infoItem.name = @"购买5万金币";
+    if ([self useApplePayment]) {
+        infoItem.goodId = @"com.game.bjby.iap_6";
+    }
+    else {
+        infoItem.goodId = @"101";
+    }
+    
+    infoItem.price = 6;
+    infoItem.amount = 1;
+    infoItem.roleInfo = @"test001";
+    [self doPayment:infoItem];
+}
+
+- (IBAction)onBuy2:(id)sender {
+    PayInfoItem *infoItem = [[PayInfoItem alloc] init];
+    infoItem.name = @"购买15万金币";
+    if ([self useApplePayment]) {
+        infoItem.goodId = @"com.game.bjby.iap_30";
+    }
+    else {
+        infoItem.goodId = @"101";
+    }
+
+    infoItem.price = 30;
+    infoItem.amount = 1;
+    infoItem.roleInfo = @"test001";
+    [self doPayment:infoItem];
 }
 
 @end

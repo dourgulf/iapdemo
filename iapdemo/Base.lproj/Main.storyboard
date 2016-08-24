@@ -24,13 +24,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hri-bU-gP5">
-                                <rect key="frame" x="211" y="303" width="177" height="73"/>
+                                <rect key="frame" x="169" y="303" width="289" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="苹果充值" image="charge">
+                                <state key="normal" title="30元购买15万金币" image="charge">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onAppleBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GX-hc-rrh"/>
+                                    <action selector="onBuy2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e06-yA-YUE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="先在系统注销自己的账号，然后用iaptest@dawenhing.top 密码Zz1234567&amp;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-w5-4IR">
@@ -39,19 +39,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nmg-Sx-94G">
+                                <rect key="frame" x="233" y="40" width="133" height="29"/>
+                                <segments>
+                                    <segment title="苹果充值"/>
+                                    <segment title="线下充值"/>
+                                </segments>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsj-KN-999">
-                                <rect key="frame" x="211" y="223" width="177" height="73"/>
+                                <rect key="frame" x="169" y="223" width="261" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="线下充值" image="charge">
+                                <state key="normal" title="6元购买3万金币" image="charge">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onCaifutongPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWA-8c-Ta0"/>
+                                    <action selector="onBuy1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbG-sA-joP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Nmg-Sx-94G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nN-ac-k0i"/>
+                            <constraint firstItem="Nmg-Sx-94G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Hsk-G1-rOv"/>
                             <constraint firstItem="hri-bU-gP5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="PMh-IV-5RU"/>
                             <constraint firstItem="dsj-KN-999" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="VnN-HT-7NF"/>
                             <constraint firstItem="tcV-w5-4IR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0k-p8-7XT"/>
@@ -64,11 +73,12 @@
                     </view>
                     <connections>
                         <outlet property="paymentResultLabel" destination="Rc6-tx-FWA" id="ZgL-kF-jsW"/>
+                        <outlet property="paymentType" destination="Nmg-Sx-94G" id="YSq-T9-2Yn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="230"/>
+            <point key="canvasLocation" x="-286" y="224"/>
         </scene>
     </scenes>
     <resources>
